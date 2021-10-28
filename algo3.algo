@@ -1,0 +1,67 @@
+
+
+PROCEDURE calcul_ps(v1,v2, ps)
+VAR
+    i : INTEGER
+BEGIN
+FOR i FROM 0 TO v1.length DO
+    ps=ps+v1[i]*v2[i]
+END_FOR
+
+END
+
+
+ALGORITHM dot product
+VAR
+v1, v2 :  ARRAY_OF INTEGER[];
+ps:INTEGER:=0
+    
+BEGIN
+// give me the length of v1
+// for i from 0 n-1 { give me an integer, read(int)}
+// saisie vecteur V1
+// saisie vecteur V2
+
+calcul_ps(v1,v2, ps)
+    IF (ps=0) THEN
+       write("vectors are orthogonal")
+    
+    ELSE
+            write("vectors are not orthogonal")
+
+    END_IF
+END
+
+
+
+FUNCTION : calcul_ps(v1,v2, ps):INTEGER
+VAR
+     i : INTEGER
+     ps:INTEGER:=0
+BEGIN
+    FOR i FROM 0 TO v1.length DO
+    ps=ps+v1[i]*v2[i]
+    RETURN  
+    ps=calcul_ps(v1,v2, ps);
+END
+
+ALGORITHM dot product
+VAR
+v1, v2 :  ARRAY_OF INTEGER[];
+ps:INTEGER:=0
+    
+BEGIN
+// give me the length of v1
+// for i from 0 n-1 { give me an integer, read(int)}
+// saisie vecteur V1
+// saisie vecteur V2
+
+calcul_ps(v1,v2, ps)
+    IF (ps=0) THEN
+       write("vectors are orthogonal")
+    
+    ELSE
+            write("vectors are not orthogonal")
+
+    END_IF
+END
